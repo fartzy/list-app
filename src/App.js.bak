@@ -1,0 +1,16 @@
+import React from 'react';
+import Tweet from './Tweet';
+import './App.css';
+
+function App(){
+  return (
+    <div className="app">
+      <Tweet name="Dev ED" message="This is random"/>
+      <Tweet name="John Snow" message="I am the True King"/>
+      <Tweet name="Traversy Media" message="Media is cool"/>    
+      <Tweet name="Mosh" message="New course is available"/>
+    </div>
+  );
+}
+
+export default App;

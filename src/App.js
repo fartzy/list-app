@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default FlatListBasics = () => {
+
+    return (
+      <View style={styles.container}>
+        <FlatList
+          data={[
+            {key: 'Devin'}, {key: 'Dan'},
+            {key: 'Dominic'},
+            {key: 'Jackson'},
+            {key: 'James'},
+            {key: 'Joel'},
+            {key: 'John'},
+            {key: 'Jillian'},
+            {key: 'Jimmy'},
+            {key: 'Julie'},
+          ]}
+          renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
+        />
+      </View>
+    );
 }
 
-export default App;
+const styles = StyleSheet.create({
+  container: {
+   flex: 1,
+   paddingTop: 22
+  },
+  item: {
+    padding: 10,
+    fontSize: 18,
+    height: 44,
+  },
+})
